@@ -2,5 +2,5 @@
 
 #Assignment for Creative: Coding iOS class @ The New School
 
-![](/images)
+![](/screenshots/teal.png)
 
