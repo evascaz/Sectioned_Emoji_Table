@@ -35,8 +35,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Dispose of any resources that can be recreated.
     }
     
-    
-    
     //TableView Required methods are below
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -133,7 +131,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        let myCGFloat = CGFloat(70)
+        let myCGFloat = CGFloat(50)
         return myCGFloat
     }
 //    
@@ -143,14 +141,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            UITapGestureRecognizer
 //        }
 
-    }
+    
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         
         if section == 0{
         return "TEAL"
-        } else if section == 1{
+        }
+        else if section == 1{
             return "BLUE"
         } else if section == 2{
             return "PURPLE"
@@ -169,13 +168,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     
     }
-
-
+    
+   
 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
-// how would i change the font of the section titles?
+        
+        let title = UILabel()
+        title.font = UIFont(name: "Futura", size: 38)!
+        title.textColor = UIColor.lightGray
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font=title.font
+        header.textLabel?.textColor=title.textColor
+        
+        
+
     }
+    
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         let footerCGFloat = CGFloat(10)
@@ -189,9 +199,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
  
 
-//        return UIFont.systemFontSize:
-//        myCell?.textLabel?.font = UIFont.systemFont(ofSize: 60.0)
-
 
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
@@ -203,7 +210,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
     }
 
-
+}
 
 //Q for Yuri: how do I push this to github using terminal ?!
 
