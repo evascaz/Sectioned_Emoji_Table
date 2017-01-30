@@ -1,6 +1,6 @@
-## Sectioned_Emoji_Table
+## A Colorful Emoji Table
 
-#Assignment for Creative: Coding iOS class @ The New School
+#Fun little exercise to practice coding for iOS
 
 
 <img src="/screenshots/teal2.png" width="200" height="400"/>
